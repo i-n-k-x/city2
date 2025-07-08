@@ -1,0 +1,856 @@
+/* Reset e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+/* Cores Temáticas */
+:root {
+    --primary: #FF2D54; /* Rosa Neon */
+    --secondary: #00B8FF; /* Azul Akihabara */
+    --dark: #0F0F1B; /* Fundo Noturno */
+    --light: #FFFFFF;
+    --accent: #FFD700; /* Dourado Destaque */
+}
+
+/* Smooth scroll para navegação interna */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+}
+
+/* Header Impactante - LOGO E BOTÃO MAXIMIZADOS */
+header {
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 15, 27, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--primary);
+    min-height: 80px;
+    gap: 25px; /* Espaçamento máximo de 25px entre logo e botão */
+}
+
+/* Logo - MAXIMIZADO */
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo img {
+    height: 60px;
+    max-height: 65px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.logo-text span {
+    color: var(--primary);
+}
+
+/* Header CTA - MAXIMIZADO */
+.header-cta {
+    flex-shrink: 0;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--light);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 45, 84, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 45, 84, 0.5);
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--light);
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 30px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 45, 84, 0.4);
+}
+
+.price-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 45, 84, 0.6);
+}
+
+.price-small {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+.video-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--light);
+    padding: 20px 15px 15px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.quality-text {
+    font-size: 1.2rem;
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, var(--dark) 100%);
+}
+
+.carousel-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--accent);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 400px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 45, 84, 0.8);
+    color: var(--light);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 45, 84, 0.2);
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.discount {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Catalog Section */
+.catalog-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 100%);
+}
+
+.catalog-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.catalog-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--light);
+    opacity: 0.9;
+}
+
+.cta-button.large {
+    font-size: 1.2rem;
+    padding: 18px 40px;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 100%);
+}
+
+.back-button {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: var(--primary);
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--light);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Catalog Grid - MODIFICADO PARA BOTÕES */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Estilos base para os botões de anime */
+.anime-button {
+    position: relative;
+    height: 120px;
+    border: none;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.anime-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    transition: all 0.3s ease;
+}
+
+.anime-button:hover::before {
+    background: linear-gradient(135deg, rgba(255, 45, 84, 0.3), rgba(0, 184, 255, 0.3));
+}
+
+.anime-button span {
+    position: relative;
+    z-index: 2;
+    color: var(--light);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    display: block;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.anime-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 45, 84, 0.4);
+}
+
+.anime-button:hover span {
+    color: var(--light);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Estilos específicos para cada botão */
+.anime-button.one-piece {
+    background-image: url("https://i.ibb.co/L84931XG/onepiece.png");
+}
+
+.anime-button.naruto {
+    background-image: url("https://i.ibb.co/Y00Q922G/naruto.png");
+}
+
+.anime-button.demon-slayer {
+    background-image: url("https://i.ibb.co/h1T6871P/demon.png");
+}
+
+.anime-button.solo-leveling {
+    background-image: url("https://i.ibb.co/k27663XG/solo.png");
+}
+
+.anime-button.jujutsu-kaisen {
+    background-image: url("https://i.ibb.co/r76763XG/jujutsu.png");
+}
+
+.anime-button.wanted-one-piece {
+    background-image: url("https://i.ibb.co/q76763XG/wanted.png");
+}
+
+.anime-button.diários-de-uma-apotecária {
+    background-image: url("https://i.ibb.co/Y00Q922G/apotecaria.png");
+}
+
+.anime-button.frieren {
+    background-image: url("https://i.ibb.co/h1T6871P/frieren.png");
+}
+
+.anime-button.dandadan {
+    background-image: url("https://i.ibb.co/k27663XG/dandadan.png");
+}
+
+.anime-button.pokemon {
+    background-image: url("https://i.ibb.co/r76763XG/pokemon.png");
+}
+
+.anime-button.hello-kitty {
+    background-image: url("https://i.ibb.co/q76763XG/hellokitty.png");
+}
+
+.anime-button.stitch {
+    background-image: url("https://i.ibb.co/Y00Q922G/stitch.png");
+}
+
+.anime-button.hanako-kun {
+    background-image: url("https://i.ibb.co/h1T6871P/hanako.png");
+}
+
+.anime-button.dragon-ball {
+    background-image: url("https://i.ibb.co/k27663XG/dragonball.png");
+}
+
+.anime-button.attack-on-titan {
+    background-image: url("https://i.ibb.co/r76763XG/attackontitan.png");
+}
+
+.anime-button.chainsaw-man {
+    background-image: url("https://i.ibb.co/q76763XG/chainsawman.png");
+}
+
+.anime-button.hunter-x-hunter {
+    background-image: url("https://i.ibb.co/Y00Q922G/hunterxhunter.png");
+}
+
+.anime-button.fullmetal-alchemist {
+    background-image: url("https://i.ibb.co/h1T6871P/fullmetal.png");
+}
+
+.anime-button.haikyuu {
+    background-image: url("https://i.ibb.co/k27663XG/haikyuu.png");
+}
+
+.anime-button.sword-art-online {
+    background-image: url("https://i.ibb.co/r76763XG/swordartonline.png");
+}
+
+.anime-button.my-hero-academia {
+    background-image: url("https://i.ibb.co/q76763XG/myheroacademia.png");
+}
+
+.anime-button.nanatsu-no-taizai {
+    background-image: url("https://i.ibb.co/Y00Q922G/nanatsunotaizai.png");
+}
+
+.anime-button.arcane {
+    background-image: url("https://i.ibb.co/h1T6871P/arcane.png");
+}
+
+.anime-button.spy-x-family {
+    background-image: url("https://i.ibb.co/k27663XG/spy.png");
+}
+
+.anime-button.tokyo-revengers {
+    background-image: url("https://i.ibb.co/N2TSCC3P/tokyo.png");
+}
+
+.anime-button.black-clover {
+    background-image: url("https://i.ibb.co/h1nTmdFz/Black-Clover.png");
+}
+
+.anime-button.fairy-tail {
+    background-image: url("https://i.ibb.co/35xDN3b9/Fairy-Tail.png");
+}
+
+.anime-button.blue-lock {
+    background-image: url("https://i.ibb.co/pBVGvRtR/Blue-Lock.png");
+}
+
+.anime-button.berserk {
+    background-image: url("https://i.ibb.co/3yGzvsvx/ber.png");
+}
+
+.anime-button.vagabond {
+    background-image: url("https://i.ibb.co/8nv4GRSN/Vagabond.png");
+}
+
+.anime-button.death-note {
+    background-image: url("https://i.ibb.co/V6xj8KF/Death-Note.png");
+}
+
+.anime-button.jojos-bizarre-adventure {
+    background-image: url("https://i.ibb.co/ksWMYVWR/Jo-Jos-Bizarre-Adventure.png");
+}
+
+.anime-button.bleach {
+    background-image: url("https://i.ibb.co/HTVq4VHQ/bleach.png");
+}
+
+.anime-button.evangelion {
+    background-image: url("https://i.ibb.co/HjMwggJ/evan.png");
+}
+
+.anime-button.one-punch-man {
+    background-image: url("https://i.ibb.co/tPcgHCGy/onepunch.png");
+}
+
+.anime-button.mob-psycho-100 {
+    background-image: url("https://i.ibb.co/pjJF1HRf/Mob-Psycho-100.png");
+}
+
+.anime-button.tokyo-ghoul {
+    background-image: url("https://i.ibb.co/NnFS1V7H/Tokyo-Ghoul.png");
+}
+
+.anime-button.hellsing {
+    background-image: url("https://i.ibb.co/xKGH9T7S/Hellsing.png");
+}
+
+.anime-button.cavaleiros-do-zodíaco {
+    background-image: url("https://i.ibb.co/39V1Xv6r/cdz.png");
+}
+
+.anime-button.yu-yu-hakusho {
+    background-image: url("https://i.ibb.co/20PqFYsc/Yu-Yu-Hakusho.png");
+}
+
+.anime-button.inuyasha {
+    background-image: url("https://i.ibb.co/HLMq4r5h/Inuyasha.png");
+}
+
+.anime-button.rurouni-kenshin {
+    background-image: url("https://i.ibb.co/CCt9zyW/Rurouni-Kenshin.png");
+}
+
+.anime-button.sailor-moon {
+    background-image: url("https://i.ibb.co/FbBt1vS4/sailor.png");
+}
+
+.anime-button.cardcaptor-sakura {
+    background-image: url("https://i.ibb.co/Z6bcKQr8/Cardcaptor-Sakura.png");
+}
+
+.anime-button.genshin-impact {
+    background-image: url("https://i.ibb.co/sJ2RnJcw/genshin.png");
+}
+
+.anime-button.tate-no-yusha {
+    background-image: url("https://i.ibb.co/7J5hqHpb/Tate-no-Yusha.png");
+}
+
+.anime-button.dorohedoro {
+    background-image: url("https://i.ibb.co/rR895dXz/Dorohedoro.png");
+}
+
+.anime-button.dr.-stone {
+    background-image: url("https://i.ibb.co/fVwjPNSw/Dr-Stone.png");
+}
+
+.anime-button.kakegurui {
+    background-image: url("https://i.ibb.co/KcJpnKsQ/Kakegurui.png");
+}
+
+.anime-button.violet-evergarden {
+    background-image: url("https://i.ibb.co/HLjyK0MY/Violet-Evergarden.png");
+}
+
+.anime-button.nana {
+    background-image: url("https://i.ibb.co/JF70B86B/Nana.png");
+}
+
+.anime-button.vocaloid {
+    background-image: url("https://i.ibb.co/V0ZYGw4z/Vocaloid.png");
+}
+
+.anime-button.record-of-ragnarok {
+    background-image: url("https://i.ibb.co/XZBFNZGX/Record-of-Ragnarok.png");
+}
+
+.anime-button.bungo-stray-dogs {
+    background-image: url("https://i.ibb.co/xqJGb3Lr/Bungo-Stray-Dogs.png");
+}
+
+.anime-button.overlord {
+    background-image: url("https://i.ibb.co/mrr16zH6/Overlord.png");
+}
+
+.anime-button.black-butler {
+    background-image: url("https://i.ibb.co/XZqR7c0b/Black-Butler.png");
+}
+
+.anime-button.your-name {
+    background-image: url("https://i.ibb.co/Tx1QM7hr/Your-Name.png");
+}
+
+.anime-button.animes-variados {
+    background-image: url("https://i.ibb.co/NdZtntV0/Miscelanea.png");
+}
+
+/* Popup System */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: var(--dark);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.close-popup:hover {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+/* Floating Help Button */
+.help-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--light);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 45, 84, 0.4);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.help-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 45, 84, 0.6);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .price-tag {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .products {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 15px;
+    }
+    
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 40px 15px;
+    }
+    
+    .anime-button {
+        height: 100px;
+    }
+    
+    .anime-button span {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-btn.next {
+        right: 10px;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 50px;
+        max-height: 55px;
+        max-width: 180px;
+    }
+    
+    .cta-button {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+    
+    .floating-help-button {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        min-width: 100px;
+    }
+    
+    .footer-logo img {
+        max-width: 100px;
+        max-height: 60px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Otimizações de performance */
+.carousel-item img {
+    will-change: transform;
+}
+
+/* Preload crítico */
+.hero, .carousel-section {
+    contain: layout style paint;
+}
+
